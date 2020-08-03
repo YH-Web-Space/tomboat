@@ -1,0 +1,229 @@
+@media (max-width: 1200px) {
+    .characteristic__description{
+        margin-left: 50px;
+    }
+    .offer {
+        background-size: 60%;
+    }
+    .slider__item{
+        margin: 0 0 60px 0;
+    }
+    .feedback__title {
+        margin-top: 0;
+    }
+}
+@media (max-width: 1000px) {
+
+    .pad{
+        padding: 0 30px;
+    }
+    .benefits{
+        padding: 100px 30px 200px 30px;
+    }
+    .menu__item {
+        margin-left: 35px;
+    }
+    .offer {
+        background-size: 50%;
+        margin-bottom: 100px;
+    }
+    .gallery__title{
+        margin-top: 50px;
+    }
+    .word__title{
+        margin-bottom: 20px;
+    }
+    .word__text{
+        margin: 10px 0 20px 120px;
+    }
+    .feedback__title{
+        padding-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    h1{
+        font-size: 50px!important;
+
+    }
+    h1,h2,h3{
+        font-weight: 700;
+    }
+    h2{
+        font-size: 35px!important;
+        text-align: center;
+    }
+    h3{
+        font-size: 25px!important;
+    }
+    .header{
+        padding: 30px 20px 0 20px;
+    }
+    .pad{
+        padding: 0 20px;
+    }
+    .header-burger {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .offer__title{
+        margin-top: 50px;
+        text-align: center;
+        font-size: 46px!important;
+    }
+    .offer{
+        background-size: 100%;
+        background-position: 0 100px;
+    }
+    .offer__decription{
+        text-align: center;
+        margin: 370px auto 0 auto;
+    }
+    .offer__btn{
+        display: block;
+        margin: 40px auto 0 auto;
+        width: 125px;
+        text-align: center;
+    }
+    .info__text{
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .info__title{
+        text-align: start;
+    }
+    .equipment__price{
+        font-size: 20px;
+    }
+    .btn{
+        font-size: 14px;
+    }
+    .characteristic__main{
+        flex-direction: column;
+    }
+    .characteristic__bullet{
+        margin: 0 0 20px 0;
+    }
+    .characteristic__big-photo{
+        margin: -100px 0;
+    }
+    .characteristic__description{
+        margin: 0;
+    }
+    .benefits {
+        padding: 100px 20px 150px 20px;
+    }
+    .benefits__title{
+        text-align: start;
+        font-size: 30px!important;
+    }
+    .benefits__item{
+        flex-wrap: wrap;
+    }
+    .benefits__name{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .benefits__text{
+        line-height: 1.6;
+    }
+    .benefits__photo{
+        padding: 0;
+    }
+    .benefits__block{
+        margin-bottom: 10px;
+    }
+    .btn-slider{
+        display: block;
+        bottom: -40px!important;
+    }
+    .gallery__text{
+        padding: 10px 20px 20px 20px;
+    }
+    .gallery__photo{
+        padding: 0;
+    }
+    .gallery__photo img{
+    }
+    .opacityZero{
+        opacity: 0;
+    }
+    .video_btn{
+        margin-top: 40px;
+    }
+    .container__form{
+        padding: 30px 17px;
+    }
+    .feedback__block_form{
+        width: 350px;
+    }
+    .slider__item{
+        flex-direction: column-reverse;
+        margin: 0 0 60px 0!important;
+    }
+    .word__text{
+        width: 100%;
+        margin: 20px 0;
+    }
+    .word__photo{
+        text-align: center;
+    }
+    .word__photo img{
+        width: 100%;
+    }
+    .footer__about, .footer__menu{
+        display: none;
+    }
+    .footer__content{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 50px 0;
+    }
+    .footer__logo{
+        margin-top: 60px;
+    }
+    .arrowSlider {
+        display: flex;
+    }
+}
+@media (max-width: 425px) {
+    .characteristic__big-photo {
+        margin: -50px 0;
+    }
+}
+@media (max-width: 375px) {
+    .feedback__block_form{
+        width: 250px;
+    }
+    .equipment{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .equipment__left{
+        align-items: center
+    }
+    .equipment__right{
+        align-items: center;
+    }
+    .equipment__btn{
+        margin-bottom: 25px;
+    }
+    #feedback__checkbox+label{
+        margin: 0;
+    }
+}
+@media (max-width: 320px) {
+    .offer__title{
+        font-size: 35px!important;
+    }
+    .table__bottom td:nth-child(even) {
+        padding-left: 5px;
+    }
+    .characteristic__title{
+        font-size: 30px!important;
+    }
+    .video_btn{
+        width: 228px;
+    }
+}

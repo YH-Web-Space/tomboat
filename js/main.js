@@ -1,40 +1,56 @@
-let formation = document.getElementById('formation');
-let span = document.querySelector('.closed-pop-up');
-let popUp = document.querySelector('.pop-up-formation');
+function popUp() {
+    let buyBtn = document.querySelector('.offer__btn');
+    let span = document.querySelectorAll('.closed-pop-up');
+    let popUpForm = document.querySelector('.pop-up-form');
+    let popUpFormation = document.querySelector('.pop-up-formation');
+    let formation = document.getElementById('formation');
 
-function openPopUp(e) {
-    e.preventDefault();
-    popUp.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-function closedPopUp() {
-    popUp.style.display = 'none';
-    document.body.style.overflow = 'visible';
-}
-formation.addEventListener("click", openPopUp);
-span.addEventListener("click", closedPopUp);
+    function openPopUp1(e) {
+        e.preventDefault();
+        popUpFormation.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+    function openPopUp2(e) {
+        e.preventDefault();
+        popUpForm.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
 
-let burger = document.querySelector('.header-burger');
-let mobileMenu = document.querySelector('.menu__mobile');
-let closeMenu = document.querySelector('.closed-menu');
-// console.log(closeMenu);
+    Array.prototype.map.call(span, (b) => {
+        b.addEventListener("click", function() {
+            popUpFormation.style.display = 'none';
+            popUpForm.style.display = 'none';
+            document.body.style.overflow = 'visible';
+        })
+    });
 
-closeMenu.onclick = function(){
-    mobileMenu.classList.remove('close-mobile-menu');
-    burger.classList.remove('burger-active-after');
-    burger.classList.remove('burger-active-before');
-    burger.classList.remove('burger-active-span');
-    mobileMenu.classList.remove('open-mobile-menu');
-    document.body.classList.remove('body-overflow');
+    formation.addEventListener("click", openPopUp1);
+    buyBtn.addEventListener('click', openPopUp2);
 }
-function showMobMenu(){
-    burger.classList.toggle('burger-active-after');
-    burger.classList.toggle('burger-active-before');
-    burger.classList.toggle('burger-active-span');
-    mobileMenu.classList.toggle('open-mobile-menu');
-    document.body.classList.toggle('body-overflow');
+function mobileMenu() {
+    let burger = document.querySelector('.header-burger');
+    let mobileMenu = document.querySelector('.menu__mobile');
+    let closeMenu = document.querySelector('.closed-menu');
+
+    closeMenu.onclick = function(){
+        mobileMenu.classList.remove('close-mobile-menu');
+        burger.classList.remove('burger-active-after');
+        burger.classList.remove('burger-active-before');
+        burger.classList.remove('burger-active-span');
+        mobileMenu.classList.remove('open-mobile-menu');
+        document.body.classList.remove('body-overflow');
+    }
+    function showMobMenu(){
+        burger.classList.toggle('burger-active-after');
+        burger.classList.toggle('burger-active-before');
+        burger.classList.toggle('burger-active-span');
+        mobileMenu.classList.toggle('open-mobile-menu');
+        document.body.classList.toggle('body-overflow');
+    }
+    burger.addEventListener('click',showMobMenu);
 }
-burger.addEventListener('click',showMobMenu);
+popUp();
+mobileMenu();
 
 // slickSlider
 // якорное меню// якорное меню// якорное меню// якорное меню// якорное меню
@@ -43,7 +59,14 @@ $(document).ready(function(){
         event.preventDefault();
         let id  = $(this).attr('href'),
             top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+
+    $(".footer__about_list").on("click","a", function (event) {
+        event.preventDefault();
+        let id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
     });
 
     $('.slider').slick({

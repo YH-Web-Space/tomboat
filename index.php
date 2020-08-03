@@ -1,8 +1,16 @@
+<?php
+    if (isset($_POST['btnForm'])){
+        header('Location: http://localhost/thanks.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Tomboat</title>
+    <!--Bootstrap icon-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>-->
     <!-- CSS style -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
@@ -21,11 +29,6 @@
             </a>
             <nav class="menu df" id="menu">
                 <ul class="menu__list df">
-                    <li class="menu__item">
-                        <a href="#menu">
-                            Главная
-                        </a>
-                    </li>
                     <li class="menu__item">
                         <a href="#characteristic">
                             Характеристики
@@ -53,7 +56,6 @@
             </div>
             <nav class="menu__mobile">
                 <ul class="menu__mobile_list">
-                    <li class="menu__mobile_item"><a href="#menu">Главная</a></li>
                     <li class="menu__mobile_item"><a href="#characteristic">Характеристики</a></li>
                     <li class="menu__mobile_item"><a href="#gallery">Галерея</a></li>
                     <li class="menu__mobile_item"><a href="#reviews">Отзывы</a></li>
@@ -103,13 +105,13 @@
                 <img src="img/boat.png" alt="" class="characteristic__big-photo">
                 <div class="characteristic__bullet df">
                     <div class="characteristic__bullet-photo">
+                        <img src="img/boat.png" alt="">
+                    </div>
+                    <div class="characteristic__bullet-photo">
                         <img src="img/boat2.png" alt="">
                     </div>
                     <div class="characteristic__bullet-photo">
                         <img src="img/boat3.png" alt="">
-                    </div>
-                    <div class="characteristic__bullet-photo">
-                        <img src="img/boat4.png" alt="">
                     </div>
                 </div>
             </div>
@@ -260,7 +262,7 @@
                 <div class="gallery__slider gallery__photos df">
                     <div class="slider__item gallery__column">
                         <div class="gallery__photo">
-                            <img src="img/galeryPhoto1.png" alt="photo">
+                            <img src="img/galleryPhoto1.png" alt="photo">
                         </div>
                         <p class="gallery__text">
                             На фоне камыша. Отличная маскировка
@@ -268,7 +270,7 @@
                     </div>
                     <div class="slider__item gallery__column">
                         <div class="gallery__photo">
-                            <img src="img/galeryPhoto2.png" alt="photo">
+                            <img src="img/galleryPhoto2.png" alt="photo">
                         </div>
                         <p class="gallery__text">
                             На полном ходу. Мотор 2.6 л
@@ -276,7 +278,7 @@
                     </div>
                     <div class="slider__item gallery__column">
                         <div class="gallery__photo">
-                            <img src="img/galeryPhoto3.png" alt="photo">
+                            <img src="img/galleryPhoto3.png" alt="photo">
                         </div>
                         <p class="gallery__text">
                             Балансировка. Можно стоять.
@@ -284,7 +286,7 @@
                     </div>
                     <div class="slider__item gallery__column">
                         <div class="gallery__photo">
-                            <img src="img/photo4.png" alt="photo">
+                            <img src="img/galleryPhoto4.png" alt="photo">
                         </div>
                         <p class="gallery__text">
                             Подготовка к транспортировке.
@@ -292,7 +294,7 @@
                     </div>
                     <div class="slider__item gallery__column">
                         <div class="gallery__photo">
-                            <img src="img/galeryPhoto5.png" alt="photo">
+                            <img src="img/galleryPhoto5.png" alt="photo">
                         </div>
                         <p class="gallery__text">
                             Превосходная лодка для охоты.
@@ -300,7 +302,7 @@
                     </div>
                     <div class="slider__item gallery__column">
                         <div class="gallery__photo">
-                            <img src="img/video.png" alt="photo">
+                            <img src="img/galleryPhoto6.png" alt="photo">
                         </div>
                         <p class="gallery__text">
                             Гребсти одно удовольствие.
@@ -408,16 +410,19 @@
         <div class="feedback__block_form">
             <div class="container__form">
                 <p class="feedback__form__text">Заполните форму обратной связи и мы свяжемся с вами</p>
-                <form action="" class="feedback__form">
-                    <input type="text" placeholder="Имя">
-                    <input type="text" placeholder="Телефон">
-                    <input type="text" placeholder="E-mail">
+                <form method="post" action="mail.php" class="feedback__form">
+                    <input type="text" placeholder="Имя" name="user-name" required minlength="2" maxlength="10">
+                    <input type="text" placeholder="Телефон" name="user-phone" required pattern="[+][^[ 0-9]+$]" minlength="10" maxlength="13">
+                    <input type="email" placeholder="E-mail" name="user-email" required>
+                    <input type="checkbox" id="feedback__checkbox">
+                    <label for="feedback__checkbox">Даю согласие на обработку персональных данных</label>
+                    <a href="">
+                        <input type="submit" class="feedback__btn btn" value="Заказать" name="btnForm" required>
+                    </a>
                 </form>
-                <input type="checkbox" id="feedback__checkbox">
-                <label for="feedback__checkbox">Даю согласие на обработку персональных данных</label>
-                <a href="#" class="feedback__btn btn">
-                    Заказать
-                </a>
+                <!--<a href="#" class="feedback__btn btn">-->
+                    <!--Заказать-->
+                <!--</a>-->
             </div>
         </div>
     </div>
@@ -431,9 +436,15 @@
                 <h4>Пластиковые лодки</h4>
                 <p>Мы в соцсетях</p>
                 <div class="footer__social">
-                    <a href=""><img src="img/instagram.png" alt="instagram" class="footer__social_photo"></a>
-                    <a href=""><img src="img/facebook.png" alt="facebook" class="footer__social_photo"></a>
-                    <a href=""><img src="img/utube.png" alt="youtube" class="footer__social_photo"></a>
+                    <a class="footer__instagram-img" href="https://www.instagram.com/tomboat_dnepr/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a class="footer__facebook-img" href="https://www.facebook.com/Tomboat-309642142833014/" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="footer__youtube-img" href="https://www.youtube.com/channel/UCQRwPu3mv1fJhgwk-ohYZNQ" target="_blank">
+                        <i class="fa fa-youtube"></i>
+                    </a>
                 </div>
             </div>
 
@@ -443,7 +454,7 @@
                 <a href="tel: +38 (067) 734 74 84">+38 (067) 734 74 84</a>
 
                 <p class="footer__email__title">E-mail</p>
-                <a href="">tomboat@mail.com</a>
+                <a href="mailto:tomboat@mail.com">tomboat@mail.com</a>
 
                 <p>Адрес</p>
                 <a href="">Днепр, Сагайдачного 4</a>
@@ -453,11 +464,11 @@
                 <h4>Все о лодках</h4>
                 <ul class="footer__about_list">
                     <li class="footer__about_link">
-                        <a href="#">Характеристики</a>
+                        <a href="#characteristic">Характеристики</a>
                     </li>
 
                     <li class="footer__about_link">
-                        <a href="#">Преимущества </a>
+                        <a href="#benefits">Преимущества </a>
                     </li>
                 </ul>
             </div>
@@ -466,7 +477,7 @@
                 <h4>Компания</h4>
                 <ul class="footer__about_list">
                     <li class="footer__about_link">
-                        <a href="#">Контакты</a>
+                        <a href="#footer">Контакты</a>
                     </li>
                     <li class="footer__about_link">
                         <a href="#reviews">Отзывы </a>
@@ -476,13 +487,11 @@
                     </li>
                 </ul>
             </div>
-
-
         </div>
     </div>
 </footer>
 
-<div class="pop-up-formation">
+<div class="pop-up pop-up-formation">
     <div class="pop-up-container-formation">
         <h2>Ротационное формирование</h2>
         <p>Ротационное формование полиэтилена, ротоформование, ротомолдинг, ротоформовка, ротационное литье.
@@ -522,6 +531,25 @@
     </div>
     <span class="closed-pop-up"></span>
 </div>
+<div class="pop-up-form  ">
+        <div class="feedback__block_form">
+            <div class="container__form">
+                <p class="feedback__form__text">Заполните форму обратной связи и мы свяжемся с вами</p>
+                <form method="post" action="mail.php" class="feedback__form">
+                    <input type="text" placeholder="Имя" name="user-name" required="" minlength="2" maxlength="10">
+                    <input type="text" placeholder="Телефон" name="user-phone" required="" pattern="[+][^[ 0-9]+$]" minlength="10" maxlength="13">
+                    <input type="email" placeholder="E-mail" name="user-email" required="">
+                    <input type="checkbox" id="feedback__checkbox">
+                    <label for="feedback__checkbox">Даю согласие на обработку персональных данных</label>
+                    <a href="">
+                        <input type="submit" class="feedback__btn btn" value="Заказать" name="btnForm" required="">
+                    </a>
+                </form>
+                <span class="closed-pop-up"></span>
+            </div>
+        </div>
+</div>
+
 
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>

@@ -1,8 +1,3 @@
-<?php
-    if (isset($_POST['btnForm'])){
-        header('Location: http://localhost/thanks.php');
-    }
-?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -18,7 +13,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
     <!-- Viewport -->
     <meta name="viewport" content="width=device-width">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
+    <!-- локализация сайта, для русскоязычного сайта ru_RU -->
+    <meta property="og:locale" content="ru_RU">
+    <!-- тип контента, по умолчанию используется article -->
+    <meta property="og:type" content="article">
+    <!-- заголовок страницы, который будет выводится в записи социальной сети -->
+    <meta property="og:title" content="Tomboat">
+    <!-- описание страницы -->
+    <meta property="og:description" content="Пластиковые лодки">
+    <!-- ссылка на изображение, которое будет публиковаться в записи -->
+    <meta property="og:image" content="img/logo.png">
+    <!-- ссылка на текущую страницу -->
+    <meta property="og:url" content="http://chnkugoo8705.leaf.chost.com.ua/">
+    <!-- название сайта -->
+    <meta property="og:site_name" content="Tomboat">
+
+    <!-- Тип карты, по умолчанию используется summary -->
+    <meta name="twitter:card" content="summary">
+    <!-- Имя/логин автора -->
+    <meta name="twitter:site" content="Жека">
+    <!-- Название страницы -->
+    <meta name="twitter:title" content="META теги">
+    <!-- Описание страницы -->
+    <meta name="twitter:description" content="про META теги">
+    <!-- Cсылка на изображение -->
+    <meta name="twitter:image" content="http://fls.guru/meta/img/bg.jpg">
 </head>
 <body>
 <header class="header" id="header">
@@ -289,7 +312,7 @@
                             <img src="img/galleryPhoto4.png" alt="photo">
                         </div>
                         <p class="gallery__text">
-                            Подготовка к транспортировке.
+                            Подготовка к транспортировке с навесным мотором.
                         </p>
                     </div>
                     <div class="slider__item gallery__column">
@@ -310,7 +333,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn video_btn">
+            <a href="https://www.youtube.com/channel/UCQRwPu3mv1fJhgwk-ohYZNQ" class="btn video_btn" target="_blank">
                 Смотреть видео в YouTube
             </a>
         </div>
@@ -322,81 +345,84 @@
             <div class="slider">
                 <div class="slider__item df">
                     <div class="word__photo">
-                        <img src="img/review_photo.png" alt="review">
+                        <img src="img/review-photo1.jpg" alt="review">
                     </div>
                     <div class="word__review">
                         <h2 class="word__title">
                             Отзывы
                         </h2>
                         <div class="word__man df">
-                            <img src="img/user.png" alt="user" class="word__person">
+                            <img src="img/user1.png" alt="user" class="word__person">
                             <div class="word__info">
                                 <p class="word__name">
-                                    Андрей Иванов
+                                    Руслан Игоревич
                                 </p>
                                 <p class="word__city">
-                                    г. Киев
+                                    г. Днепр
                                 </p>
                             </div>
                         </div>
                         <p class="word__text">
-                            Вы зашли на наш сайт, значит, вас интересует продукция нашего завода, а именно лодка – скрадок
-                            Tomboat (Томбоат). С момента появления первого рабочего образца прошло 4 года. За это время
-                            вносились правки и велись обсуждения с конструкторами по пластмассам и прямыми потребителями.
+                            Получил лодку и сразу начал тюнинговать. Я покупал еще в белом цвете.
+                            Задул пульвиком в два прохода. Цвет подобрал под наше болото.
+                            Сейчас доделаю прицеп под перевозку и дерьжитесь пернатые :) Спасибо за
+                            хороший товар и подробную консультацию.
                         </p>
                     </div>
                 </div>
                 <div class="slider__item df">
                     <div class="word__photo">
-                        <img src="img/review_photo.png" alt="review">
+                        <img src="img/review-photo2.jpg" alt="review">
                     </div>
                     <div class="word__review">
                         <h2 class="word__title">
                             Отзывы
                         </h2>
                         <div class="word__man df">
-                            <img src="img/user.png" alt="user" class="word__person">
+                            <img src="img/user2.png" alt="user" class="word__person">
                             <div class="word__info">
                                 <p class="word__name">
-                                    Андрей Иванов
+                                    Евгений Борисович
                                 </p>
                                 <p class="word__city">
-                                    г. Киев
+                                    г. Запорожье
                                 </p>
                             </div>
                         </div>
                         <p class="word__text">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Animi delectus maiores quasi sed temporibus. Animi at autem
-                                distinctio dolores eligendi illo incidunt nesciunt odio quidem?
-                                Consectetur cupiditate deserunt nulla officia.</span>
+                            <span>Купил лодку для рыбалки. В плавнях очень много камыша и коряг,
+                                не удобно на надувной плавать. Каждый год борюсь с браконьерами и
+                                собираю их сети. Удобная и универсальная лодка. Рекомендую.
+                            </span>
                         </p>
                     </div>
                 </div>
                 <div class="slider__item df">
                     <div class="word__photo">
-                        <img src="img/review_photo.png" alt="review">
+                        <img src="img/review-photo3.jpg" alt="review">
                     </div>
                     <div class="word__review">
                         <h2 class="word__title">
                             Отзывы
                         </h2>
                         <div class="word__man df">
-                            <img src="img/user.png" alt="user" class="word__person">
+                            <img src="img/user3.png" alt="user" class="word__person">
                             <div class="word__info">
                                 <p class="word__name">
                                     Андрей Иванов
                                 </p>
                                 <p class="word__city">
-                                    г. Киев
+                                    г. Днепр
                                 </p>
                             </div>
                         </div>
                         <p class="word__text">
-                            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aut
-                                consectetur consequatur dolorum, eaque eius eum eveniet incidunt
-                                inventore ipsum iusto, neque nostrum odio pariatur placeat, sed temporibus
-                                veniam voluptates.</span>
+                            <span>Первое фото купленной лодки Томбоат. Спать не мог, ждал посылку :)
+                                Лодка супер. Пока забирал на перевозчике все мужики спрашивали где купил и
+                                почем? Пока вез на багажнике то мужики с соседних машин вываливались и обсматривали.
+                                В Украине это новинка но через время рыбаки и охотники полюбят эту лодку. Спасибо за
+                                ваши идеи и товар. Рекомендую.
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -410,19 +436,23 @@
         <div class="feedback__block_form">
             <div class="container__form">
                 <p class="feedback__form__text">Заполните форму обратной связи и мы свяжемся с вами</p>
-                <form method="post" action="mail.php" class="feedback__form">
-                    <input type="text" placeholder="Имя" name="user-name" required minlength="2" maxlength="10">
-                    <input type="text" placeholder="Телефон" name="user-phone" required pattern="[+][^[ 0-9]+$]" minlength="10" maxlength="13">
-                    <input type="email" placeholder="E-mail" name="user-email" required>
-                    <input type="checkbox" id="feedback__checkbox">
-                    <label for="feedback__checkbox">Даю согласие на обработку персональных данных</label>
+                <form class="feedback__form">
+
+                    <input type="text" placeholder="Имя" name="Имя" required minlength="2" maxlength="10">
+                    <input type="text" placeholder="Телефон" name="Телефон" required pattern="[+][^[ 0-9]+$]" minlength="10" maxlength="13">
+                    <input type="email" placeholder="E-mail" name="E-mail" required>
+                    <input type="checkbox" id="feedback__checkbox1" required>
+                    <label for="feedback__checkbox1">Даю согласие на обработку персональных данных</label>
                     <a href="">
                         <input type="submit" class="feedback__btn btn" value="Заказать" name="btnForm" required>
                     </a>
+
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="Tomboat">
+                    <input type="hidden" name="admin_email" value="tregub_artem@ukr.net">
+                    <input type="hidden" name="form_subject" value="feedback">
+                    <!-- END Hidden Required Fields -->
                 </form>
-                <!--<a href="#" class="feedback__btn btn">-->
-                    <!--Заказать-->
-                <!--</a>-->
             </div>
         </div>
     </div>
@@ -450,14 +480,15 @@
 
             <div class="footer__info">
                 <p>Телефон:</p>
-                <a href="tel: +38 (066) 730 92 22">+38 (066) 730 92 22</a>
                 <a href="tel: +38 (067) 734 74 84">+38 (067) 734 74 84</a>
 
                 <p class="footer__email__title">E-mail</p>
-                <a href="mailto:tomboat@mail.com">tomboat@mail.com</a>
+                <a href="mailto:tregub_artem@ukr.net">tregub_artem@ukr.net</a>
+
 
                 <p>Адрес</p>
-                <a href="">Днепр, Сагайдачного 4</a>
+                <span>Днепр, Сагайдачного 4</span>
+                <span>Днепр, ул.Рабочая, 65</span>
             </div>
 
             <div class="footer__about">
@@ -533,17 +564,24 @@
 </div>
 <div class="pop-up-form  ">
         <div class="feedback__block_form">
-            <div class="container__form">
+            <div class="container__form" id="form">
                 <p class="feedback__form__text">Заполните форму обратной связи и мы свяжемся с вами</p>
-                <form method="post" action="mail.php" class="feedback__form">
-                    <input type="text" placeholder="Имя" name="user-name" required="" minlength="2" maxlength="10">
-                    <input type="text" placeholder="Телефон" name="user-phone" required="" pattern="[+][^[ 0-9]+$]" minlength="10" maxlength="13">
-                    <input type="email" placeholder="E-mail" name="user-email" required="">
-                    <input type="checkbox" id="feedback__checkbox">
-                    <label for="feedback__checkbox">Даю согласие на обработку персональных данных</label>
+                <form class="feedback__form">
+
+                    <input type="text" placeholder="Имя" name="Имя" required minlength="2" maxlength="10">
+                    <input type="text" placeholder="Телефон" name="Телефон" required pattern="[+][^[ 0-9]+$]" minlength="10" maxlength="13">
+                    <input type="email" placeholder="E-mail" name="E-mail" required>
+                    <input type="checkbox" id="feedback__checkbox2" required>
+                    <label for="feedback__checkbox2">Даю согласие на обработку персональных данных</label>
                     <a href="">
-                        <input type="submit" class="feedback__btn btn" value="Заказать" name="btnForm" required="">
+                        <input type="submit" class="feedback__btn btn" value="Заказать" name="btnForm" required>
                     </a>
+
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="Tomboat">
+                    <input type="hidden" name="admin_email" value="tregub_artem@ukr.net">
+                    <input type="hidden" name="form_subject" value="feedback">
+                    <!-- END Hidden Required Fields -->
                 </form>
                 <span class="closed-pop-up"></span>
             </div>

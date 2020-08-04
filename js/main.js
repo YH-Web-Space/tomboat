@@ -1,5 +1,6 @@
 function popUp() {
-    let buyBtn = document.querySelector('.offer__btn');
+    let buyBtnHeader = document.querySelector('.offer__btn');
+    let buyBtnCharacteristic = document.querySelector('.equipment__btn');
     let span = document.querySelectorAll('.closed-pop-up');
     let popUpForm = document.querySelector('.pop-up-form');
     let popUpFormation = document.querySelector('.pop-up-formation');
@@ -25,7 +26,8 @@ function popUp() {
     });
 
     formation.addEventListener("click", openPopUp1);
-    buyBtn.addEventListener('click', openPopUp2);
+    buyBtnHeader.addEventListener('click', openPopUp2);
+    buyBtnCharacteristic.addEventListener('click', openPopUp2);
 }
 function mobileMenu() {
     let burger = document.querySelector('.header-burger');
@@ -85,6 +87,21 @@ $(document).ready(function(){
             }
         ]
     });
+
+    $("form").submit(function() { //Change
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            // alert("Thank you!");
+            location.href = '../thanks.php';
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
 });
-
-

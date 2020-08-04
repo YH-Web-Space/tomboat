@@ -37,7 +37,7 @@ h3{
 }
 /*header*/
 .header{
-	padding: 60px 50px 0 50px;
+	padding: 30px 50px 0 50px;
 	background: url(../img/header_background.png) no-repeat center center / cover;
     background-size: 100% 100%;
 }
@@ -89,14 +89,14 @@ h3{
 .offer__title{
 	font-size: 70px;
 	line-height: 110%;
-	margin-top: 149px;
+	margin-top: 100px;
 }
 .offer__decription{
 	font-size: 22px;
 	line-height: 140%;
 }
 .offer__btn{
-	margin-top: 50px;
+	margin-top: 20px;
 	display: inline-block;
 }
 .btn{
@@ -310,6 +310,7 @@ h3{
 	flex-basis: 50%;
 }
 .word__photo img{
+	border-radius: 20px;
 	width: 90%;
 }
 .word__review{
@@ -441,12 +442,12 @@ h3{
 	background: url("../img/email.svg") no-repeat;
     background-size: 17px 17px;
 }
-#feedback__checkbox{
+#feedback__checkbox1, #feedback__checkbox2{
 	position: absolute;
 	z-index: -1;
 	opacity: 0;
 }
-#feedback__checkbox+label {
+#feedback__checkbox1+label, #feedback__checkbox2+label {
 	display: inline-flex;
 	align-items: center;
 	user-select: none;
@@ -454,7 +455,7 @@ h3{
 	margin: 0 30px 0 70px;
 	font-size: 12px;
 }
-#feedback__checkbox+label::before {
+#feedback__checkbox1+label::before, #feedback__checkbox2+label::before {
 	content: '';
 	display: inline-block;
 	width: 23px;
@@ -469,11 +470,11 @@ h3{
 	background-size: 50% 50%;
 	opacity: 0.5;
 }
-#feedback__checkbox:checked+label::before {
+#feedback__checkbox1:checked+label::before, #feedback__checkbox2:checked+label::before {
 	opacity: 1;
 	background-image: url("../img/tick.png");
 }
-#feedback__checkbox:not(:disabled):not(:checked)+label:hover::before {
+#feedback__checkbox1:not(:disabled):not(:checked)+label:hover::before, #feedback__checkbox2:not(:disabled):not(:checked)+label:hover::before {
 	opacity: 1;
 }
 .feedback__btn{
@@ -515,6 +516,9 @@ h3{
 	text-decoration: none;
 	transition: 300ms;
 }
+.footer__social a:nth-child(1):hover {
+	color: #ffa500;
+}
 .footer__social a:nth-child(2):hover {
 	color: #4267b2;
 }
@@ -530,7 +534,7 @@ h3{
 	margin-top: 0;
 	margin-bottom: 10px;
 }
-.footer__info a{
+.footer__info a, .footer__info span{
 	text-decoration: none;
 	display: block;
 	font-size: 18px;
@@ -846,7 +850,7 @@ h3{
 	background-size: 100% 100%;
 	/*background-size: contain;*/
 	background-position: bottom;
-	/*height: 100vh;*/
+	height: 100vh;
 }
 .logo-thanks, .check-img, .check-info, .thanks-btn{
 	justify-content: center;
